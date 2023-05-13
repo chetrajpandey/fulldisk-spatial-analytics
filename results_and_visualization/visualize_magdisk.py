@@ -63,5 +63,5 @@ ax.text(x+445, y+10, 'W', fontsize=8.4, color='white', va='bottom', ha='left')
 plt.tight_layout(pad=0)
 
 # Save the resulting image
-plt.savefig('central_limb_mag.png', bbox_inches='tight', dpi=300)
+plt.savefig('central_limb_mag.png', bbox_inches='tight', dpi=200)
 
