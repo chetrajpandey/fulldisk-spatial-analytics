@@ -41,7 +41,7 @@ For simplification:  folder inside data_labels, named simplified_data_labels tha
 (vi) --max_lr: OneCycleLR scheduler parameter used to control the maximum learning rate; default=0.00001<br /> 
 (vii) --models: select specific model to train. enter alex, vgg, resnet for alexnet, vgg16, and resnet resp ; default=alex<br /> 
 
-We used HPCE (SLURM) to run our models as jobs. For this code to work outside of SLURM, remove the line 45: job_id = os.getenv('SLURM_JOB_ID') in train.py  and specify a directory instead. However, for the SLURM env, and example jobrun script is given below: <br /> 
+We used HPCE (SLURM) to run our models as jobs. For this code to work outside of SLURM, remove the line 45: job_id = os.getenv('SLURM_JOB_ID') in train.py  and specify a directory instead. However, for the SLURM env, an example bash script to run a job is given below: <br /> 
 
 ```bash
 #!/bin/bash
