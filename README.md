@@ -69,3 +69,9 @@ python directory_to/modeling/train.py --fold=1 --batch_size=64 --lr=0.00001 --we
 
 iput -rf $SLURM_JOB_ID
 ```
+
+#### 4. results_and_visualization:
+
+(i) This folder contains 1 jupyter notebook "Result_Analysis.ipynb" for showing the results on validation sets of all three models including location analysis indicating correctly/incorrectly made predictions in central and near-limb locations. <br /> 
+(ii) All the prediction results are stored inside the results folder
+(iii) visualize_spatial_recalls.py generates the visualization for prediction in the near-limb and central locations creating a heatmap.
