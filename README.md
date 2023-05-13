@@ -7,4 +7,4 @@
 
 #### Near-Limb regions in Full-disk Magnetogram
 
-![alt text](https://github.com/chetrajpandey/fulldisk-spatial-analytics/blob/main/results_and_visualization/central_limb_mag.pdf?raw=true)
+![alt text](https://github.com/chetrajpandey/fulldisk-spatial-analytics/blob/main/results_and_visualization/central_limb_mag.png?raw=true)

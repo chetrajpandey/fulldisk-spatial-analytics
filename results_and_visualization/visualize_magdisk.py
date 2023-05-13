@@ -16,6 +16,7 @@ Based on that the the central locations were in the radius of 338 pixels.
 """
 r1=435 #full-disk radius
 r = 338 #central radius
+color_of_circle='red'
 
 # Create a new figure and plot the input image
 fig, ax = plt.subplots()
@@ -28,24 +29,24 @@ ax.grid(False)
 
 # Define the coordinates for the center of the circle
 x, y = img.shape[1] // 2, img.shape[0] // 2
-fc = colorConverter.to_rgba('mediumblue', alpha=0.03)
+fc = colorConverter.to_rgba(color_of_circle, alpha=0.03)
 
 # Draw a inner circle with radius r (central radius)centered at (x, y) on top of the input image
-circle = plt.Circle((x, y), r, ec='mediumblue', fc=fc, fill=True, linewidth=1.2,  linestyle='--')
+circle = plt.Circle((x, y), r, ec=color_of_circle, fc=fc, fill=True, linewidth=1.2,  linestyle='--')
 ax.add_artist(circle)
 
 # Draw a outer circle to verify: circle with radius r1 centered at (x, y) on top of the input image
-# circle1 = plt.Circle((x, y), r1, color='blue', fill=False, linestyle='--', linewidth=0.5)
-# ax.add_artist(circle1)
+circle1 = plt.Circle((x, y), r1, color=color_of_circle, fill=False, linestyle='--', linewidth=0.5)
+ax.add_artist(circle1)
 
 # Draw a diameter line and add arrows pointing left and right
 diameter = 2 * r
 x_vals = [x - diameter/2, x + diameter/2]
 y_vals = [y, y]
 # ax.plot(x_vals, y_vals, 'r--', linewidth=2)
-ax.arrow(x, y, (-diameter/2)+15, 0, head_width=10, head_length=15, fc='mediumblue', ec='mediumblue', lw=0.5, linestyle='dashed')
-ax.arrow(x, y, (diameter/2)-15, 0, head_width=10, head_length=15, fc='mediumblue', ec='mediumblue', lw=0.5, linestyle='dashed')
-ax.scatter(x, y, c='mediumblue', s=10, marker='|')
+ax.arrow(x, y, (-diameter/2)+15, 0, head_width=10, head_length=15, fc=color_of_circle, ec=color_of_circle, lw=0.5, linestyle='dashed')
+ax.arrow(x, y, (diameter/2)-15, 0, head_width=10, head_length=15, fc=color_of_circle, ec=color_of_circle, lw=0.5, linestyle='dashed')
+ax.scatter(x, y, c=color_of_circle, s=10, marker='|')
 
 # Add text "+70°" and "-70°" on top of the arrows
 ax.text((x-diameter/2)+60, y, '-70\u00B0', fontsize=8.4, color='white', va='bottom', ha='right')
@@ -62,5 +63,5 @@ ax.text(x+445, y+10, 'W', fontsize=8.4, color='white', va='bottom', ha='left')
 plt.tight_layout(pad=0)
 
 # Save the resulting image
-plt.savefig('annotated magneto.pdf', bbox_inches='tight', dpi=500)
+plt.savefig('central_limb_mag.png', bbox_inches='tight', dpi=300)
 
