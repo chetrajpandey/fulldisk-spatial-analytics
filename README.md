@@ -6,5 +6,8 @@
 [![pytorch](https://img.shields.io/badge/PyTorch-1.10.0-EE4C2C.svg?style=flat&logo=pytorch)](https://pytorch.org)
 
 #### Near-Limb regions in Full-disk Magnetogram
+Original Full-disk Magnetogram |  Annotated Full-disk Magnetogram
+:-------------------------:|:-------------------------:
+![](https://github.com/chetrajpandey/fulldisk-spatial-analytics/blob/main/results_and_visualization/mag1.png?raw=true)  |  ![](https://github.com/chetrajpandey/fulldisk-spatial-analytics/blob/main/results_and_visualization/central_limb_mag.png?raw=true)
 
-![alt text](https://github.com/chetrajpandey/fulldisk-spatial-analytics/blob/main/results_and_visualization/central_limb_mag.png?raw=true)
+<!-- ![alt text](https://github.com/chetrajpandey/fulldisk-spatial-analytics/blob/main/results_and_visualization/central_limb_mag.png?raw=true) -->
